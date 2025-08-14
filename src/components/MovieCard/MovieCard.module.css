@@ -1,0 +1,57 @@
+.movieCard {
+    background-color: #141C24;
+    border-radius: 10px;
+    padding: 1rem;
+
+    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);*/
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    color: white;
+
+    width: 220px;
+    height: 480px;
+    justify-content: space-between;
+}
+.starImg {
+    width: 1rem;
+}
+
+.movieCardPoster {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.movieCard h3 {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0rem 0;
+}
+
+.movieCard p {
+    font-size: 0.9rem;
+    margin: 0rem 0;
+    color: #bbbbbb;
+}
+
+
+
+.movieCard button {
+
+    padding: 0.8rem 4.5rem;
+    background-color: #9534D2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer; /*Это что*/
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+    align-self: flex-end;
+    margin-top: 0.5rem;
+}
+
+.movieCard button:hover {
+    background-color: #7222a6;
+}

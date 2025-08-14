@@ -1,0 +1,86 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #141C24;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #CED2DA;
+    color: white;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #9534D2;
+    display: inline-block;
+    width: 2.8rem;
+    line-height: 0.9rem;
+    padding-top: 2px;
+}
+
+.logoWrapper {
+    display: flex;
+    width: 10rem;
+    height: 32px;
+    margin-left: 4rem;
+}
+.logoImg {
+    display: inline-block;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.ticketImg {
+    padding-right: 4px;
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding-top: 3px;
+    padding-left: 3px;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #a855f7;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.leftWrapper {
+    margin-left: auto;
+    display: flex;
+}
+
+.exitButton {
+    padding-left: 2px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.actions button:hover {
+    color: #a855f7;
+}
+
+.sunImg {
+    margin-right: 4rem;
+    margin-left: 1rem;
+}
+
+

@@ -1,0 +1,20 @@
+/* обёртка всего приложения */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* растягиваем по всей высоте экрана */
+  background-color: #141C24;
+  font-family: sans-serif;
+}
+
+/* контейнер под контент */
+.main {
+  flex: 1;
+  padding: 2rem;
+}
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}

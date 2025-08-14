@@ -1,0 +1,117 @@
+.seat {
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+    border-radius: 4px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.seat:hover {
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.blocked {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.payed {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.free {
+    background-color: #9b59b6;
+}
+
+.selected {
+    background-color: #6800b1;
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.hallContainer {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.seatingArea {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.rowNumber {
+    width: 30px;
+    text-align: right;
+    margin-right: 6px;
+    font-size: 14px;
+    color: #666;
+}
+
+.screenWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: 13px;
+    width: 100%;
+}
+
+.screenText {
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.screenLine {
+    height: 8px;
+    background-color: #bbb;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #111;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 10;
+    transform: translate(-50%, -100%);
+    white-space: nowrap;
+}
+
+.close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    margin-left: 10px;
+}
+
+.hoverInfo {
+    background-color: #f2f2f2;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    width: fit-content;
+}

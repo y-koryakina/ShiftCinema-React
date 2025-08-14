@@ -1,0 +1,92 @@
+[
+  {
+    "imdbID": "tt0372784",
+    "description": "После трагедии Брюс Уэйн становится Бэтменом и начинает борьбу с преступностью в Готэме.",
+    "ageRating": "PG-13",
+    "userRatings": {
+      "kinopoisk": 7.8,
+      "imdb": 8.2
+    }
+  },
+  {
+    "imdbID": "tt1877830",
+    "description": "Новая мрачная история о Бэтмене, который расследует череду загадочных преступлений в Готэме.",
+    "ageRating": "R",
+    "userRatings": {
+      "kinopoisk": 7.9,
+      "imdb": 8.3
+    }
+  },
+  {
+    "imdbID": "tt2975590",
+    "description": "Бэтмен и Супермен сталкиваются из-за разногласий в методах борьбы с преступностью.",
+    "ageRating": "PG-13",
+    "userRatings": {
+      "kinopoisk": 6.6,
+      "imdb": 6.4
+    }
+  },
+  {
+    "imdbID": "tt0096895",
+    "description": "Классический фильм о противостоянии Бэтмена и Джокера в Готэм-сити.",
+    "ageRating": "PG-13",
+    "userRatings": {
+      "kinopoisk": 7.6,
+      "imdb": 7.5
+    }
+  },
+  {
+    "imdbID": "tt0103776",
+    "description": "Бэтмен противостоит Пингвину и Женщине-кошке, защищая Готэм от хаоса.",
+    "ageRating": "PG-13",
+    "userRatings": {
+      "kinopoisk": 7.5,
+      "imdb": 7.1
+    }
+  },
+  {
+    "imdbID": "tt0118688",
+    "description": "Бэтмен и Робин сражаются с Мистером Фризом и Ядовитым Плющом.",
+    "ageRating": "PG-13",
+    "userRatings": {
+      "kinopoisk": 5.0,
+      "imdb": 3.8
+    }
+  },
+  {
+    "imdbID": "tt0112462",
+    "description": "Бэтмен сталкивается с новым врагом — Загадочником и Двуликим.",
+    "ageRating": "PG-13",
+    "userRatings": {
+      "kinopoisk": 6.5,
+      "imdb": 5.4
+    }
+  },
+  {
+    "imdbID": "tt4116284",
+    "description": "Анимационное приключение, где Лего-Бэтмен учится работать в команде.",
+    "ageRating": "PG",
+    "userRatings": {
+      "kinopoisk": 7.1,
+      "imdb": 7.3
+    }
+  },
+  {
+    "imdbID": "tt0103359",
+    "description": "Анимационный сериал о ночных приключениях Бэтмена в Готэме.",
+    "ageRating": "TV-PG",
+    "userRatings": {
+      "kinopoisk": 8.4,
+      "imdb": 9.0
+    }
+  },
+  {
+    "imdbID": "tt18689424",
+    "description": "Расширенная версия фильма с новыми сценами и подробностями конфликта Бэтмена и Супермена.",
+    "ageRating": "R",
+    "userRatings": {
+      "kinopoisk": 6.8,
+      "imdb": 6.9
+    }
+  }
+]

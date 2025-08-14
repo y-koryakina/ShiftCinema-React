@@ -1,0 +1,151 @@
+{
+  "success": true,
+  "schedules": [
+    {
+      "date": "09.07.25",
+      "seances": [
+        {
+          "time": "10:50",
+          "hall": {
+            "name": "Red",
+            "places": [
+              [
+                { "price": 0, "type": "BLOCKED" },
+                { "price": 0, "type": "BLOCKED" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 0, "type": "BLOCKED" },
+                { "price": 0, "type": "BLOCKED" }
+              ],
+              [
+                { "price": 0, "type": "BLOCKED" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 0, "type": "BLOCKED" }
+              ],
+              [
+                { "price": 100, "type": "ECONOM" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 100, "type": "ECONOM" }
+              ],
+              [
+                { "price": 100, "type": "ECONOM" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 100, "type": "ECONOM" }
+              ],
+              [
+                { "price": 100, "type": "PAYED" },
+                { "price": 100, "type": "PAYED" },
+                { "price": 100, "type": "PAYED" },
+                { "price": 100, "type": "PAYED" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" }
+              ],
+              [
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" }
+              ]
+            ]
+          }
+        },
+        {
+          "time": "14:10",
+          "hall": {
+            "name": "Red",
+            "places": [
+              [
+                { "price": 0, "type": "BLOCKED" },
+                { "price": 0, "type": "BLOCKED" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 0, "type": "BLOCKED" },
+                { "price": 0, "type": "BLOCKED" }
+              ],
+              [
+                { "price": 0, "type": "BLOCKED" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 0, "type": "BLOCKED" }
+              ],
+              [
+                { "price": 100, "type": "ECONOM" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 100, "type": "ECONOM" }
+              ],
+              [
+                { "price": 100, "type": "ECONOM" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 100, "type": "ECONOM" }
+              ],
+              [
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" }
+              ],
+              [
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" },
+                { "price": 100, "type": "ECONOM" }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "date": "10.07.25",
+      "seances": [
+        {
+          "time": "12:00",
+          "hall": {
+            "name": "Blue",
+            "places": [
+              [
+                { "price": 150, "type": "ECONOM" },
+                { "price": 150, "type": "ECONOM" },
+                { "price": 150, "type": "ECONOM" },
+                { "price": 150, "type": "ECONOM" },
+                { "price": 150, "type": "ECONOM" },
+                { "price": 150, "type": "ECONOM" }
+              ],
+              [
+                { "price": 150, "type": "ECONOM" },
+                { "price": 150, "type": "ECONOM" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 200, "type": "COMFORT" },
+                { "price": 150, "type": "ECONOM" }
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

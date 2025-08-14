@@ -1,0 +1,19 @@
+.section {
+    /*padding: 2rem; */
+    color: white;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-top: -0.5rem;
+    padding-left: 4rem;
+    margin-bottom: 0;
+
+}
+
+.movieList {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}

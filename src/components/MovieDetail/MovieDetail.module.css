@@ -1,0 +1,63 @@
+.movieContainer {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.movieImage {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.textWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.collapsedTextBlock {
+    max-height: 21rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.fullTextBlock {
+    max-height: none;
+    transition: max-height 0.3s ease;
+}
+
+.toggleButton {
+    margin-top: 1rem;
+    align-self: start;
+    padding: 0.5rem 1rem;
+    background-color: #a855f7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.backButton {
+    align-self: flex-start;
+    margin-top: 2rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
