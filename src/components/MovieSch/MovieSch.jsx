@@ -2,21 +2,18 @@ import React, { useEffect, useState } from "react";
 import {useParams, useLocation, Link} from "react-router-dom";
 import styles from "./MovieSch.module.css";
 import ProgressBar from "../ProgressBar/ProgressBar.jsx";
-import { API_BASE_URL } from '../../config/config.js';
 import {ROUTES} from "../../config/routes.js";
 
-//МНЕ НИКОГДА ЭТО НЕ ПОНЯТЬ
 const MovieSch = () => {
     const { movieId } = useParams();
-    const location = useLocation(); //новый хук, чтоб понять куда тыкнули на прошлой странице
+    const location = useLocation();
     const { date, hallName, time } = location.state || {};
 
     const [schedules, setSchedules] = useState([]);
     const [selectedSeance, setSelectedSeance] = useState(null);
-    const [selectedSeats, setSelectedSeats] = useState([]); //то что выберет пользователь
-    const [hoveredSeat, setHoveredSeat] = useState(null); //мышь наведена ИЛИ НЕТ
-    const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 }); //что это???
-    //tooltipPos - ???
+    const [selectedSeats, setSelectedSeats] = useState([]);
+    const [hoveredSeat, setHoveredSeat] = useState(null);
+    const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
 
     useEffect(() => {
         fetch('/data/mockSchedule.json')
@@ -27,26 +24,22 @@ const MovieSch = () => {
     useEffect(() => {
         if (!date || !time || !hallName || schedules.length === 0) return;
 
-        const day = schedules.find((s) => s.date === date); //ну и тут что такое s
-        const seance = day?.seances.find( //почему тут знак вопроса, а в прошлой строке его нет
+        const day = schedules.find((s) => s.date === date);
+        const seance = day?.seances.find(
             (s) => s.time === time && s.hall.name === hallName
         );
-        //что из себя представляет сущность "сеанс"? почему именно ее не передали по location
-        //может это как-то связано с тем, что плохо передавать целые обьекты и лучше проские пропс?
-        //а ну или скорее всего потому что ее как обьекта нет в json, это мы ее придумали... хз
+
 
         if (seance) setSelectedSeance(seance);
     }, [schedules, date, time, hallName]);
 
-    //вот я теперь вижу обычные js функции и у меня много вопросов к тому, что с ними происходит при перерендеринге
-    const handleSeatToggle = (rowIdx, colIdx) => { //обычная js функция. что делает? что такое toggle
+    const handleSeatToggle = (rowIdx, colIdx) => {
         const key = `${rowIdx}-${colIdx}`;
         setSelectedSeats((prev) =>
             prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]
         );
     };
 
-    // Формируем текст выбранных мест
     const selectedSeatsText =
         selectedSeats.length === 0
             ? "не выбраны"
@@ -56,8 +49,6 @@ const MovieSch = () => {
                     return `${row + 1} ряд, ${col + 1} место`;
                 })
                 .join("; ");
-
-
 
     return (
         <div>

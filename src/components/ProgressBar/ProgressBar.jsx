@@ -16,4 +16,4 @@ const ProgressBar = ({ currentStep, totalSteps }) => {
     );
 };
 
-export default ProgressBar; //зачем это писать
+export default ProgressBar;

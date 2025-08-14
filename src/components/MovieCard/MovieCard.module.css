@@ -3,7 +3,6 @@
     border-radius: 10px;
     padding: 1rem;
 
-    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);*/
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -28,16 +27,14 @@
 .movieCard h3 {
     display: inline-block;
     font-size: 1rem;
-    margin: 0rem 0;
+    margin: 0 0;
 }
 
 .movieCard p {
     font-size: 0.9rem;
-    margin: 0rem 0;
+    margin: 0 0;
     color: #bbbbbb;
 }
-
-
 
 .movieCard button {
 
@@ -45,7 +42,7 @@
     background-color: #9534D2;
     border: none;
     border-radius: 8px;
-    cursor: pointer; /*Это что*/
+    cursor: pointer;
     font-size: 0.9rem;
     transition: background-color 0.2s ease;
     align-self: flex-end;

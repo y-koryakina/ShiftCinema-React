@@ -14,22 +14,19 @@ const UserData = () => {
     const handleChange = (e) => {
         const { name, value } = e.target;
 
-        setForm((prevForm) => ({ //вот тут мы внутри вызываем setForm, поэтому асинхронность и перерендеринг
+        setForm((prevForm) => ({
             ...prevForm,
             [name]: value
         }));
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault(); //чтоб браузер не перезагружал страницу (обязательно в реакт)
-        //иначе мы все потеряем (почему? сообщение же выведется в консоль)
+        e.preventDefault();
+
         console.log('Form submitted:', form);
     };
 
-    //вот тут type Обеспечивает валидацию? как будто бы только email дает валидацию
-    //почему у меня красивая кнопка, если класс из стилей я не применила? или есть глобальные... в прошлых файлах
-    //что за br
-    //как лучше расположить код, чтоб оно так не вытягивалось за пределы экрана?
+
     return (
         <div>
             <h2>Введите ваши данные</h2>
@@ -75,4 +72,4 @@ const UserData = () => {
     );
 };
 
-export default UserData; //зачем
+export default UserData;

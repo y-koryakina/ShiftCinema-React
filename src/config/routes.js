@@ -1,8 +1,8 @@
 export const ROUTES = {
     HOME: "/",
-    MOVIE_DETAIL_TEMPLATE: "/movie/:id", // для маршрутизатора
-    MOVIE_DETAIL: (id) => `/movie/${id}`, // для перехода по конкретному id
+    MOVIE_DETAIL_TEMPLATE: "/movie/:id",
+    MOVIE_DETAIL: (id) => `/movie/${id}`,
     SEANCE_TEMPLATE: "/movie/:movieId/schedule",
-    SEANCE: (movieId) => `/movie/${movieId}/schedule`, //почему у меня тут где-то кавычки а где то апострофы...
+    SEANCE: (movieId) => `/movie/${movieId}/schedule`,
     DATA_FORM: "/form"
 };

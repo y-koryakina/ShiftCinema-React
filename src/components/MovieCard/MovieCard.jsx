@@ -3,10 +3,8 @@ import { Link } from 'react-router-dom';
 import styles from './MovieCard.module.css';
 import {ROUTES} from "../../config/routes.js";
 
-//что в круглых скобках - проп? да, который мы принимаем как аргумент нашей функции (нв)
 const MovieCard = ({ movie }) => {
     const imageUrl = movie.Poster;
-    //что такое тут alt
     return (
         <div className={styles.movieCard}>
             <div>

@@ -14,7 +14,7 @@
 
 .field {
     display: flex;
-    flex-direction: column; /* надпись над полем */
+    flex-direction: column;
     gap: 4px;
     max-width: 400px;
 }
@@ -24,7 +24,7 @@
     background-color: #7a25c8;
     padding: 0.8em 0.8em;
     width: 120px;
-    margin-top: 18px; /*почему когда я пишу тут отступ то и на вторую кнопку он срабатывает*/
+    margin-top: 18px;
 }
 
 .buttonBack {

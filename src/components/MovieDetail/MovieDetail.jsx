@@ -7,30 +7,27 @@ import {API_BASE_URL} from '../../config/config.js';
 
 const MovieDetail = () => {
     const {id} = useParams();
-    const [movie, setMovie] = useState(null); // состояние - массив с его данными
+    const [movie, setMovie] = useState(null);
 
-
-    //хорошая ли практика делать много отдельных useState или можно сделать reduce либо другие хуки
-    //и обязательно ли вообще тут делать хуки
-    const [loading, setLoading] = useState(true); //типа флажок, идет загрузка или уже нет
-    const [error, setError] = useState(null); //вспомогательная переменная чтоб ошибку в нее класть(почему хук)
-    const [expanded, setExpanded] = useState(false); //флажок, развернуто ли описание.
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [expanded, setExpanded] = useState(false);
 
     useEffect(() => {
         fetch(`${API_BASE_URL}&i=${id}`)
             .then((res) => {
                 if (!res.ok) {
-                    throw new Error('Ошибка загрузки данных'); //catch не ловит ошибки 404 и 500. А обработать нужно
+                    throw new Error('Ошибка загрузки данных');
                 }
                 return res.json();
             })
-            .then((data) => { //тут в круглых скобках - то, что подаем в функцию? это тоже проп или просто арг
-                setMovie(data); //ВСЕ ТУТ ПРАВИЛЬНО
+            .then((data) => {
+                setMovie(data);
                 setLoading(false);
 
             })
             .catch((err) => {
-                setError(err.message); //какие тут ошибки могут пойматься, если не 404 и не 500
+                setError(err.message);
                 setLoading(false);
             });
     }, [id]);
@@ -41,8 +38,6 @@ const MovieDetail = () => {
 
     const imageUrl = movie.Poster;
 
-
-    //все таки в каких ситуациях нужен div а когда react.fragment ?
     return (
         <div className={styles.contentWrapper}>
             <button onClick={() => window.history.back()} className={styles.backButton}>

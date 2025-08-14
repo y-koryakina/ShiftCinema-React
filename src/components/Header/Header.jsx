@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './Header.module.css';
 
-//что такое nav
-//не уверена что тут везде можно оставить logoImg
 const Header = () => (
     <header className={styles.header}>
         <div className={styles.logoWrapper}>

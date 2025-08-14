@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './ScheduleSelector.module.css';
-import { API_BASE_URL } from '../../config/config.js';
 import {ROUTES} from "../../config/routes.js";
 
 
-//передаем в него Id фильма через проп - что проп а что не проп.. это связано с компонентами только? или с js func
 const ScheduleSelector = ({ movieId }) => {
     const [schedules, setSchedules] = useState([]);
     const [selectedDay, setSelectedDay] = useState(null);
     const [selected, setSelected] = useState({ hallName: null, time: null });
-    //тут const относится к функции? к хуку? а где название... или это анонимная функция
 
     useEffect(() => {
         fetch('/data/mockSchedule.json')
@@ -21,10 +18,8 @@ const ScheduleSelector = ({ movieId }) => {
     }, [movieId]);
 
 
-    //вот эта штука будет выполняться при каждом перерендере? будет ли обновляться каждый раз ссылка на нее?
-    //с другой стороны мы ее никуда дальше не передаем
-    const getHallsForSelectedDay = () => { //обычная js функция
-        const daySchedule = schedules.find(s => s.date === selectedDay); //что за буква s, откуда она
+    const getHallsForSelectedDay = () => {
+        const daySchedule = schedules.find(s => s.date === selectedDay);
         if (!daySchedule) return [];
 
         const hallsMap = {};
@@ -34,21 +29,16 @@ const ScheduleSelector = ({ movieId }) => {
             if (!hallsMap[hallName]) {
                 hallsMap[hallName] = new Set();
             }
-            hallsMap[hallName].add(seance.time); // то есть время СЕАНСА добавляем в set по ключу "ЗАЛ"?
-            //это мапа из сетов или что...
-            //мы когда ее создали назвали map, но объявили как {}
+            hallsMap[hallName].add(seance.time);
         }
 
-
-        //Во что мы вот это вот конвертировали??
         //кошмар
         return Object.entries(hallsMap).map(([name, timesSet], i) => ({
-            id: i + 1, // просто индекс, не обязательно
+            id: i + 1,
             name,
             times: Array.from(timesSet).sort(),
         }));
     };
-
 
     return (
         <div className={styles.scheduleWrapper}>
