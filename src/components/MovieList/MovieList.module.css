@@ -1,16 +1,20 @@
 .section {
     color: white;
+    margin: 0 5rem;
+
 }
 
 .section h2 {
     font-size: 2rem;
     margin-top: -0.5rem;
-    padding-left: 4rem;
+    margin-left: 8vw;
     margin-bottom: 0;
 
 }
 
 .movieList {
+    max-width: 1200px;
+    justify-self: center;
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;

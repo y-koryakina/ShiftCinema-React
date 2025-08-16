@@ -7,6 +7,7 @@ import MovieSch from './components/MovieSch/MovieSch.jsx';
 import UserData from './components/UserData/UserData.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import {ROUTES} from "./config/routes.js";
+import Card from "./components/Card/Card.jsx";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
                         <Route path={ROUTES.MOVIE_DETAIL_TEMPLATE} element={<MovieDetail />} />
                         <Route path={ROUTES.SEANCE_TEMPLATE} element={<MovieSch />} />
                         <Route path={ROUTES.DATA_FORM} element={<UserData />} />
+                        <Route path={ROUTES.CARD} element={<Card />} />
                     </Routes>
                 </main>
             </div>

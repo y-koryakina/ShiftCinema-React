@@ -2,9 +2,10 @@
     display: flex;
     gap: 2rem;
     align-items: flex-start;
-    padding: 2rem;
+    padding: 0 2rem 0 2rem;
     max-width: 1000px;
-    margin: 0 auto;
+    margin-left: -3rem;
+
     flex-wrap: wrap;
 }
 .contentWrapper {
@@ -12,13 +13,20 @@
     flex-direction: column;
     max-width: 1000px;
     margin: 0 auto;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+.movieContainer h2 {
+    font-size: 3rem;
+    margin: 0 0 -1rem 0;
+    color: white;
+
 }
 
 .movieImage {
-    width: 300px;
+    width: 250px;
     height: auto;
-    border-radius: 12px;
+    border-radius: 1px;
     object-fit: cover;
 }
 
@@ -39,25 +47,67 @@
     transition: max-height 0.3s ease;
 }
 
-.toggleButton {
-    margin-top: 1rem;
-    align-self: start;
-    padding: 0.5rem 1rem;
-    background-color: #a855f7;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+
+
+.toggleButton:hover {
+    color: rgba(255, 255, 255, 0.56);
+}
+.toggleButton:focus {
+    outline: none;
 }
 
 .backButton {
     align-self: flex-start;
-    margin-top: 2rem;
-    background-color: #444;
-    color: white;
+    display: flex;
+    margin-top: -1rem;
+    margin-left: -2rem;
+    background-color: transparent;
     border: none;
-    border-radius: 6px;
-    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    padding: 0 16px 0 0;
     cursor: pointer;
 }
 
+.backButton:hover {
+    color: rgba(255, 255, 255, 0.53);
+}
+
+.backButton:focus {
+    outline: none;
+}
+
+.arrow {
+    background-color: transparent;
+    display: inline;
+}
+
+.BackText {
+    font-size: 1rem;
+    display: inline;
+}
+
+.movieContainer p {
+    margin: 1rem 0 0 0;
+}
+
+.greyText {
+    font-size: 0.9rem;
+    color: #9c9a9a;
+}
+
+.starGap {
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+}
+
+.toggleButton {
+    display: inline-block;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.42);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0;
+}

@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import ProgressBar from "../ProgressBar/ProgressBar.jsx";
 import styles from "./UserData.module.css";
+import {ROUTES} from "../../config/routes.js";
+import {Link} from "react-router-dom";
 
 const UserData = () => {
     const [form, setForm] = useState({
@@ -28,7 +30,7 @@ const UserData = () => {
 
 
     return (
-        <div>
+        <div className={styles.allWrapper}>
             <h2>Введите ваши данные</h2>
             <div>Шаг 2 из 3</div>
             <ProgressBar currentStep={2} totalSteps={3}/>
@@ -65,8 +67,13 @@ const UserData = () => {
                 <br />
 
 
-                <button className={styles.buttonBack} onClick={() => window.history.back()}>Назад</button>
-                <button className={styles.buttonContinue} type="submit">Продолжить</button>
+                <div className={styles.btnContainer}>
+                    <button className={styles.buttonBack} onClick={() => window.history.back()}>Назад</button>
+                    <Link  to={ROUTES.CARD}>
+                        <button className={styles.buttonContinue} type="submit">Продолжить</button>
+                    </Link>
+                </div>
+
             </form>
         </div>
     );

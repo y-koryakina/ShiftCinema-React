@@ -1,14 +1,33 @@
+.allWrapper{
+    margin: 0 0 0 12rem;
+    color: white;
+}
+
+.allWrapper h2{
+    margin-top: 0;
+}
+
+.upP{
+    font-size: 0.8rem;
+    color: #c2c6cc;
+}
+
+.upContainer {
+    line-height: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
 .seat {
-    width: 20px;
-    height: 20px;
-    margin: 3px;
+    width: 17px;
+    height: 17px;
+    margin: 10px;
     border-radius: 4px;
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
 }
 
 .seat:hover {
-    transform: scale(1.2);
+    transform: scale(2);
     z-index: 2;
 }
 
@@ -27,14 +46,13 @@
 }
 
 .selected {
-    background-color: #6800b1;
-    transform: scale(1.2);
+    background-color: #69209a;
+    transform: scale(1.6);
     z-index: 2;
 }
 
 .hallContainer {
     display: inline-block;
-    margin-left: 20px;
 }
 
 .seatingArea {
@@ -48,37 +66,38 @@
     margin-bottom: 4px;
 }
 
-.rowNumber {
-    width: 30px;
-    text-align: right;
-    margin-right: 6px;
-    font-size: 14px;
-    color: #666;
-}
+
 
 .screenWrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-bottom: 20px;
-    margin-left: 13px;
-    width: 100%;
+    margin:  0 0 20px 0;
 }
 
 .screenText {
-    display: flex;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 0.8rem;
+    font-weight: 100;
     margin-bottom: 5px;
-    color: #444;
+    color: #c2c6cc;
+    align-self: center;
 }
 
 .screenLine {
-    height: 8px;
-    background-color: #bbb;
+    height: 10px;
+    background-color: #CED2DA;
     border-radius: 4px;
     width: 100%;
+    /* margin-left: 11px; */
+}
+.rowNumber {
+    width: 30px;
+    text-align: left;
+    max-width: 5px;
+    margin:  0 8px 0 0;
+    font-size: 14px;
+    color: #c2c6cc;
 }
 
 .tooltip {
@@ -114,4 +133,24 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin: 10px 0;
     width: fit-content;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.buyButton,
+.backButton {
+    font-size: 0.9rem;
+    padding: 0.9rem 2.5rem;
+    border: 1px solid #CED2DA;
+    background-color: transparent;
+    border-radius: 11px;
+    color: white;
+}
+
+.buyButton {
+    border: 1px solid transparent;
+    background-color: #9534D2;
 }

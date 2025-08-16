@@ -1,10 +1,15 @@
 .header {
+    border-bottom: 1px solid #CED2DA;
+    margin-bottom: 1rem;
+}
+.container {
     display: flex;
+    color: white;
     align-items: center;
     background-color: #141C24;
     padding: 1rem 2rem;
-    border-bottom: 1px solid #CED2DA;
-    color: white;
+    margin-left: 8rem;
+    margin-right: 8rem;
 }
 
 .logo {

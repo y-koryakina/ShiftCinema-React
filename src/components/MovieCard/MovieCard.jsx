@@ -14,14 +14,17 @@ const MovieCard = ({ movie }) => {
             </div>
 
             <div>
-
                 <div>
-                    <img src="/img/YelStar.svg" alt="Звезда" className={styles.starImg} />
-                    <img src="/img/YelStar.svg" alt="Звезда" className={styles.starImg} />
-                    <img src="/img/YelStar.svg" alt="Звезда" className={styles.starImg} />
-                    <img src="/img/YelStar.svg" alt="Звезда" className={styles.starImg} />
-                    <img src="/img/YelStar.svg" alt="Звезда" className={styles.starImg} />
+                    {Array.from({ length: 5 }, (_, i) => (
+                        <img
+                            key={i}
+                            src={i < Math.round(movie.userRatings.kinopoisk / 2) ? "/img/YelStar.svg" : "/img/WhiteStar.svg"}
+                            alt="Звезда"
+                            className={styles.starImg}
+                        />
+                    ))}
                 </div>
+
                 <p>Кинопоиск - {movie.userRatings.kinopoisk}</p>
                 <Link to={ROUTES.MOVIE_DETAIL(movie.imdbID)}>
                     <button>Подробнее</button>

@@ -42,7 +42,7 @@ const MovieSch = () => {
 
     const selectedSeatsText =
         selectedSeats.length === 0
-            ? "не выбраны"
+            ? "-"
             : selectedSeats
                 .map((key) => {
                     const [row, col] = key.split("-").map(Number);
@@ -51,14 +51,10 @@ const MovieSch = () => {
                 .join("; ");
 
     return (
-        <div>
-            <button onClick={() => window.history.back()}>Назад</button>
+        <div className={styles.allWrapper}>
             <h2>Выбор места</h2>
             <div>Шаг 1 из 3</div>
             <ProgressBar currentStep={1} totalSteps={3} />
-
-            <p>Зал: {hallName}</p>
-            <p>Дата и время: {date}, {time}</p>
 
             {selectedSeance ? (
                 <div style={{ marginTop: "20px", position: "relative" }}>
@@ -67,6 +63,8 @@ const MovieSch = () => {
                             <div className={styles.screenText}>Экран</div>
                             <div className={styles.screenLine}></div>
                         </div>
+
+                        <p className={styles.upP}>Ряд</p>
 
                         <div className={styles.seatingArea}>
                             {selectedSeance.hall.places.map((row, rowIdx) => (
@@ -108,6 +106,7 @@ const MovieSch = () => {
                         </div>
                     </div>
 
+
                     {hoveredSeat && (
                         <div
                             className={styles.tooltip}
@@ -131,13 +130,30 @@ const MovieSch = () => {
 
                     <div style={{ marginTop: "20px" }}>
 
-                        <div style={{ marginTop: "10px", fontWeight: "bold",  marginBottom: "20px", }}>
-                            Выбранные места: {selectedSeatsText}
+                        <div className={styles.upContainer}>
+                            <p className={styles.upP}>Зал</p>
+                            <p>{hallName} </p>
                         </div>
 
-                        <Link to={ROUTES.DATA_FORM}>
-                            <button disabled={selectedSeats.length === 0}>Купить</button>
-                        </Link>
+                        <div className={styles.upContainer}>
+                            <p className={styles.upP}>Дата и время</p>
+                            <p>{date} {time}</p>
+                        </div>
+
+
+                        <div className={styles.upContainer}>
+                            <p className={styles.upP}>Места</p>
+                            <p>{selectedSeatsText}</p>
+                        </div>
+
+                        <div className={styles.buttons}>
+                            <button onClick={() => window.history.back()} className={styles.backButton}>Назад</button>
+
+                            <Link to={ROUTES.DATA_FORM}>
+                                <button disabled={selectedSeats.length === 0} className={styles.buyButton}>Купить</button>
+                            </Link>
+                        </div>
+
                     </div>
                 </div>
             ) : (

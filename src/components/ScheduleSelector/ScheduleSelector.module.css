@@ -2,14 +2,27 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin: 2rem 0 0 -1rem;
+
+}
+
+.scheduleWrapper h3 {
+    font-size: 1.5rem;
+    margin: 0;
+
 }
 
 .dayRow {
     display: flex;
-    gap: 0.5rem;
+    gap: 0;
     flex-wrap: wrap;
+    background-color: #344051;
+    border-radius: 16px;
+    width: fit-content;
+    min-width: 50px;
+    max-width: 100%;
 }
+
 
 .timeColumn {
     display: flex;
@@ -17,37 +30,65 @@
     gap: 0.5rem;
 }
 
-.dayButton,
-.timeButton {
-    padding: 0.5rem 1rem;
-    border: 1px solid #888;
-    border-radius: 6px;
+.activeButton,
+.dayButton{
+    padding: 0.8rem 1rem;
+    border-radius: 14px;
+    margin: 3px;
     background-color: transparent;
     color: white;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    border: transparent;
+}
+
+.dayButton:hover {
+    border: transparent;
+}
+.activeButton:hover {
+    border: transparent;
 }
 
 .activeButton {
-    background-color: #9333ea;
-    color: white;
-    border: 1px solid #9333ea;
+    background-color: #141C24;
 }
 
+.activeButton:focus {
+    outline: none;
+}
+
+.activeTimeButton,
+.timeButton {
+    padding: 0.8rem 1rem;
+    border: 2px solid #CED2DA;
+    border-radius: 14px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.activeTimeButton {
+    background-color: #97A1AF;
+    border: 2px solid transparent;
+}
+
+
+.continueButton:disabled,
 .continueButton {
     margin-top: 1rem;
-    padding: 0.6rem 1.2rem;
-    background-color: #a855f7;
+    padding: 1.1rem 5.7rem;
+    background-color: #9534D2;
     border: none;
-    border-radius: 8px;
+    border-radius: 14px;
     color: white;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+}
+
+.continueButton:hover {
+    background-color: #9a36da;
 }
 
 .continueButton:disabled {
-    background-color: #444;
     cursor: not-allowed;
 }
 .scheduleBlock {
@@ -63,8 +104,10 @@
 
 .hallName {
     font-weight: bold;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+
+
 }
 
 .timeRow {
@@ -73,16 +116,10 @@
     flex-wrap: wrap;
 }
 
-.timeButton {
-    padding: 0.5rem 1rem;
-    background-color: #444;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-}
 
-.activeButton {
-    background-color: #a855f7;
+.separator {
+    margin: 0;
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
 }

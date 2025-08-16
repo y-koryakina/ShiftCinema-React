@@ -17,6 +17,11 @@ const ScheduleSelector = ({ movieId }) => {
             });
     }, [movieId]);
 
+    useEffect(() => {
+        if (schedules.length > 0 && !selectedDay) {
+            setSelectedDay(schedules[0].date);
+        }
+    }, [schedules, selectedDay]);
 
     const getHallsForSelectedDay = () => {
         const daySchedule = schedules.find(s => s.date === selectedDay);
@@ -40,24 +45,41 @@ const ScheduleSelector = ({ movieId }) => {
         }));
     };
 
+    function parseCustomDate(dateStr) {
+        const [day, month, year] = dateStr.split('.').map(Number);
+        return new Date(2000 + year, month - 1, day);
+    }
+
     return (
         <div className={styles.scheduleWrapper}>
-            <h2>Расписание</h2>
+            <h3>Расписание</h3>
 
             <div className={styles.dayRow}>
-                {schedules.map(({ date }) => (
-                    <button
-                        key={date}
-                        className={date === selectedDay ? styles.activeButton : styles.dayButton}
-                        onClick={() => {
-                            setSelectedDay(date);
-                            setSelected({ hallName: null, time: null });
-                        }}
-                    >
-                        {date}
-                    </button>
+                {schedules.map(({ date }, index) => (
+                    <React.Fragment key={date}>
+                        <button
+                            className={date === selectedDay ? styles.activeButton : styles.dayButton}
+                            onClick={() => {
+                                setSelectedDay(date);
+                                setSelected({ hallName: null, time: null });
+                            }}
+                        >
+                            {new Intl.DateTimeFormat('ru-RU', {
+                                weekday: 'short',
+                                day: 'numeric',
+                                month: 'short'
+                            }).format(parseCustomDate(date))}
+                        </button>
+
+                        {index < schedules.length - 1 && (
+                            <span className={styles.separator}>|</span>
+                        )}
+
+                    </React.Fragment>
                 ))}
             </div>
+
+
 
             <div className={styles.scheduleBlock}>
                 {selectedDay &&
@@ -70,7 +92,7 @@ const ScheduleSelector = ({ movieId }) => {
                                         key={time}
                                         className={
                                             selected.hallName === hall.name && selected.time === time
-                                                ? styles.activeButton
+                                                ? styles.activeTimeButton
                                                 : styles.timeButton
                                         }
                                         onClick={() => setSelected({ hallName: hall.name, time })}

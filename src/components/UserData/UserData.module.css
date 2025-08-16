@@ -1,3 +1,9 @@
+.allWrapper{
+    margin: 0 0 0 12rem;
+}
+.allWrapper h2{
+    margin-top: 0;
+}
 .input {
     border-radius: 8px;
     border: 1px solid #eeeeee;
@@ -5,7 +11,7 @@
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
+    background-color: transparent;
     transition: border-color 0.25s;
 }
 
@@ -19,16 +25,24 @@
     max-width: 400px;
 }
 
-.buttonContinue {
-    margin-left: 20px;
-    background-color: #7a25c8;
-    padding: 0.8em 0.8em;
-    width: 120px;
+.btnContainer{
+    display: flex;
+    gap: 14px;
     margin-top: 18px;
 }
 
-.buttonBack {
-    padding: 0.8em 0.8em;
-    border: 1px solid #eeeeee;
-    width: 120px;
+.buttonBack,
+.buttonContinue {
+    font-size: 0.9rem;
+    padding: 0.9rem 2.5rem;
+    border: 1px solid #CED2DA;
+    background-color: transparent;
+    border-radius: 11px;
+    color: white;
+
+}
+
+.buttonContinue {
+    border: 1px solid transparent;
+    background-color: #9534D2;
 }
