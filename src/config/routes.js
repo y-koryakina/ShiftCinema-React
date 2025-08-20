@@ -5,5 +5,6 @@ export const ROUTES = {
     SEANCE_TEMPLATE: "/movie/:movieId/schedule",
     SEANCE: (movieId) => `/movie/${movieId}/schedule`,
     CARD: "/card",
-    DATA_FORM: "/form"
+    DATA_FORM: "/form",
+    SUCCESS: "/success"
 };

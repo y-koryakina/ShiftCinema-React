@@ -1,0 +1,65 @@
+.allWrapper {
+    margin-left: 12rem;
+}
+
+.allWrapper h2 {
+    font-size: 24px;
+}
+
+.allWrapper p {
+    margin: 0;
+}
+
+.upP {
+    font-size: 0.7rem;
+    color: rgba(206, 210, 218, 0.49);
+}
+.lowP {
+    font-size: 1rem;
+}
+
+.logoImg{
+    display: inline;
+}
+
+.logo {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.btnContainer{
+    display: flex;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.buttonBack,
+.buttonContinue {
+    font-size: 0.9rem;
+    padding: 0.9rem 2.5rem;
+    border: 1px solid #CED2DA;
+    background-color: transparent;
+    border-radius: 11px;
+    color: white;
+}
+
+.buttonContinue {
+    border: 1px solid transparent;
+    background-color: #9534D2;
+}
+
+.block {
+    border: 1px solid #CED2DA;
+    height: 300px;
+    width: 800px;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 1.5rem 2rem 2.5rem 2rem;
+
+}
+
+.group{
+    display:flex;
+    flex-direction: column;
+    margin: 0 0 20px 0;
+}

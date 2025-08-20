@@ -8,6 +8,7 @@ import UserData from './components/UserData/UserData.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import {ROUTES} from "./config/routes.js";
 import Card from "./components/Card/Card.jsx";
+import Success from "./components/Success/Success.jsx";
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
                         <Route path={ROUTES.SEANCE_TEMPLATE} element={<MovieSch />} />
                         <Route path={ROUTES.DATA_FORM} element={<UserData />} />
                         <Route path={ROUTES.CARD} element={<Card />} />
+                        <Route path={ROUTES.SUCCESS} element={<Success />} />
                     </Routes>
                 </main>
             </div>
